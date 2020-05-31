@@ -1,4 +1,11 @@
 
+# commands
+dotnet build --configuration Release
+dotnet run --configuration Release --no-build --project Tailspin.SpaceGame.Web
+dotnet dev-certs https --trust
+dotnet test --configuration Release --no-build
+dotnet test Tailspin.SpaceGame.Web.Tests --configuration Release --no-build --logger trx
+dotnet test --no-build --configuration Release /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:CoverletOutput=./TestResults/Coverage/
 # Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
